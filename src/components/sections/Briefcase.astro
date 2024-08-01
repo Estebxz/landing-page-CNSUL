@@ -1,0 +1,58 @@
+---
+import Shield from "../icons/nav/Shield.astro";
+import Search from "../icons/nav/Search.astro";
+import Books from "../icons/nav/Books.astro";
+import Callout from "../icons/nav/Callout.astro";
+import FirstKit from "../icons/nav/FirstKit.astro";
+import Gavel from "../icons/nav/Gavel.astro";
+import Content from "@/styles/ui/SectionContainer.astro";
+import type { BriefcaseItem } from "@/types";
+const briefcase: Array<BriefcaseItem> = [
+  {
+    title: `Seguridad y Salud en el Trabajo`,
+    description: ``,
+    icon: Shield,
+  },
+  {
+    title: `Auditorias internas`,
+    description: `ofrecemos servicios de auditoría interna que ayudan a las empresas a identificar áreas de mejora, gestionar riesgos y fortalecer sus controles internos.`,
+    icon: Search,
+  },
+  {
+    title: `Capacitacion y Formación`,
+    description: `ofrecemos programas de capacitación y formación diseñados para desarrollar el potencial de tus empleados, mejorar su desempeño y garantizar que tu empresa se mantenga competitiva en un entorno en constante cambio.`,
+    icon: Books,
+  },
+  {
+    title: `Outsourcing Empresarial`,
+    description: `permiten a las organizaciones concentrarse en sus competencias centrales mientras nosotros gestionamos sus procesos y operaciones auxiliares.`,
+    icon: Callout,
+  },
+  {
+    title: `Capacitacion en Primeros Auxilios`,
+    description: `creemos que la seguridad y el bienestar de los empleados son esenciales para el éxito de cualquier organización. Nuestra capacitación en primeros auxilios está diseñada para equipar a los empleados con las habilidades y el conocimiento necesarios para responder de manera efectiva a emergencias médicas en el lugar de trabajo.`,
+    icon: FirstKit,
+  },
+  {
+    title: `Desarrollo de Politicas de Salud Ocupacional`,
+    description: `ofrecemos servicios especializados en el desarrollo de políticas de salud ocupacional diseñadas para proteger y promover la salud de todos los trabajadores, asegurando al mismo tiempo el cumplimiento de las normativas legales.`,
+    icon: Gavel,
+  },
+];
+---
+
+<Content id="briefcase" class="bg-neutral-600/80">
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10">
+    {
+      briefcase.map((tag) => (
+        <li class="flex flex-col items-center gap-4 border border-default p-6">
+          <div class="flex items-center justify-center size-16 rounded-full border-2 border-current p-2">
+            <tag.icon class="size-12"/>
+          </div>
+          <p class="text-center font-extrabold text-xl">{tag.title}</p>
+          <p>{tag.description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</Content>

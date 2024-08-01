@@ -1,0 +1,55 @@
+{
+  "SEO_TITLE": "",
+  "SEO_SUBTITLE": "",
+  "SEO_DESCRIPTIÓN": "",
+  "SEO": {
+    "ERROR_404_TITLE": "404 pagina no encontrada",
+    "ERROR_404_DESCRIPTIÓN": "pagina no encontrada(Error 404). Revisa la URL o explora nuestras secciones. ¿Necesitas ayuda? Contactanos"
+  },
+  "PROFILES": [
+    {
+      "network": "LinkedIn",
+      "username": "Erika Jhorleny",
+      "url": "https://www.linkedin.com/in/erika-jhorleny-mayorga-pradera-8ab142208/"
+    },
+    {
+      "network": "WhatsApp",
+      "username": "Erika Jhorleny",
+      "url": "https://w.app/d2P3Un"
+    },
+    {
+      "network": "Facebook",
+      "username": "Erika Jhorleny",
+      "url": "https://www.facebook.com/erikajhorleny"
+    }
+  ],
+  "HEADER": {
+    "LOGO_TITLE": "Regresar a "
+  },
+  "HEADER_BRIEFCASE": "PORTAFOLIO",
+  "HEADER_ABOUT_US": "ACERCA DE NOSOTROS",
+  "HEADER_CONTACT_US": "CONTACTENOS",
+  "INTRO_TITLE": "Bienvenidos/as",
+  "INTRO_TITLE_AFTER_BR": "TRABAJANDO SEGUROS S.A.S",
+  "INTRO_FIRST_PARAGRAPH": "Nos dedicamos a ofrecer soluciones en <strong>consultoría y seguros para proteger lo que más importa.</strong> Con años de experiencia en el sector, nuestro equipo de profesionales altamente capacitados trabaja incansablemente para brindarte la tranquilidad y seguridad que necesitas en cada aspecto de tu vida personal y profesional.",
+  "INTRO_SECOND_PARAGRAPH": "Nuestro compromiso es entender tus necesidades específicas y proporcionar servicios personalizados que incluyen desde la asesoría en seguros hasta la implementación de estrategias efectivas para la gestión de riesgos. <strong>Somos tu aliado de confianza, ayudándote a tomar decisiones informadas y asegurando que estés preparado para cualquier eventualidad.</strong>",
+  "FOOTER": {
+    "DISCLAIMER": "",
+    "LEGAL": {
+      "TITLE": "Legal",
+      "NOTICE": "Aviso Legal",
+      "PRIVACY": "Privacidad",
+      "COOKIES": "Cookies",
+      "PRIVACY_POLICY": "Política de Privacidad",
+      "TOS": "Términos y Condiciones"
+    },
+    "WEB_MAP": {
+      "TITLE": "Mapa Web",
+      "HOME": "Inicio",
+      "BRIEFCASE": "Portafolio",
+      "ABOUT_US": "Acerca de nosotros",
+      "CONTACT_US": "Contacto"
+    },
+    "PRODUCED_BY": "Producido por"
+  }
+}

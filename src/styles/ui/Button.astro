@@ -1,0 +1,21 @@
+---
+import styles from "@/styles/Button.module.css";
+
+interface buttonProps {
+  id: string;
+  class: string;
+  target: string;
+  url: string;
+}
+const { id, class: className, target, url } = Astro.props;
+---
+
+<a 
+href={url} 
+target={`${target ?? '_blank'}`} 
+rel="noopener noreferrer"
+id={id}
+class={`lg:text-2xl md:text-xl text-xs uppercase md:px-5 w-fit font-medium no-underline px-3 py-3 border border-solid border-white rounded-sm ${styles.button} ${className ?? ''}`}
+>
+<slot />
+</a>

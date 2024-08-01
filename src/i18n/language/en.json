@@ -1,0 +1,56 @@
+{
+  "SEO_TITLE": "",
+  "SEO_SUBTITLE": "",
+  "SEO_DESCRIPTION": "",
+  "SEO": {
+    "ERROR_404_TITLE": "404 page not found",
+    "ERROR_404_DESCRIPTION": "page not found (Error 404). Check the URL or explore our sections. ¿Need help? Contact us"
+  },
+  "PROFILES": [
+    {
+      "network": "LinkedIn",
+      "username": "Erika Jhorleny",
+      "url": "https://www.linkedin.com/in/erika-jhorleny-mayorga-pradera-8ab142208/"
+    },
+    {
+      "network": "WhatsApp",
+      "username": "Erika Jhorleny",
+      "url": "https://w.app/d2P3Un"
+    },
+    {
+      "network": "Facebook",
+      "username": "Erika Jhorleny",
+      "url": "https://www.facebook.com/erikajhorleny"
+    }
+  ],
+  "HEADER": {
+    "LOGO_TITLE": "Back to M&M"
+  },
+  "HEADER_BRIEFCASE": "PORTFOLIO",
+  "HEADER_ABOUT_US": "ABOUT US",
+  "HEADER_CONTACT_US": "CONTACT US",
+  "INTRO_TITLE": "Welcome",
+"INTRO_TITLE_AFTER_BR": "to the ESLAND Awards",
+"INTRO_DESCRIPTION_1": "Cinema has the Oscars, music has the Grammys, and <strong>streaming has the ESLAND</strong>. These awards celebrate the creativity and talent of the best content creators in the Spanish-speaking community.",
+"INTRO_DESCRIPTION_2": "Spain, Latin America, and Andorra are united by creators and their communities, to reminisce and relive <strong>some of the best moments of the year.</strong>",
+"INTRO_DESCRIPTION_3": "After two successful galas, one at the Palau de la Música Catalana in Barcelona and another at the National Auditorium in Mexico City, we eagerly await <strong>the third edition in Andorra.</strong>",
+  "FOOTER": {
+    "DISCLAIMER": "",
+      "LEGAL": {
+      "TITLE": "Legal",
+      "NOTICE": "Legal Notice",
+      "PRIVACY": "Privacy",
+      "COOKIES": "Cookies",
+      "PRIVACY_POLICY": "Privacy Policy",
+      "TOS": "Terms and Conditions"
+    },
+    "WEB_MAP": {
+      "TITLE": "Website Map",
+      "HOME": "Home",
+      "BRIEFCASE": "Portfolio",
+      "ABOUT_US": "About us",
+      "CONTACT_US": "Contact"
+    },
+    "PRODUCED_BY": "Produced by"
+    }
+  }

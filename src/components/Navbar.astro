@@ -1,0 +1,54 @@
+---
+import LoaderIcon from "@nav/Loader.astro";
+import Link from "@/styles/ui/Link.astro";
+import MenuIcon from "@/components/icons/nav/MenuIcon.astro";
+import CloseIcon from "@/components/icons/nav/CloseIcon.astro";
+
+import { getI18N } from "@/i18n/index";
+import {
+	getLangFromUrl,
+	useTranslations,
+	useTranslatedPath,
+} from "../i18n/utils";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+<header id="header-nav" class="fixed top-0 z-50 w-full px-6 py-4">
+	<div class="mx-auto flex w-full items-center justify-between gap-8">
+		<Link
+			checkActive={false}
+			href={translatePath("/")}
+			class="relative z-10"
+			aria-label={i18n.HEADER.LOGO_TITLE}
+			title={i18n.HEADER.LOGO_TITLE}
+		>
+			<LoaderIcon
+				class="absolute m-auto w-10 opacity-0 blur-sm transition-opacity duration-300 hover:opacity-100"
+			/>
+			<LoaderIcon class="w-10" />
+		</Link>
+		<nav
+			id="header-menu"
+			class="fixed w-full h-dvh inset-0 bg-[#151a36]/90 md:text-xl lg:text-xl flex flex-col items-center justify-end gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:flex-row md:translate-y-[initial]"
+		>
+			<Link href={translatePath("/portafolio/")}>
+				{t("nav.briefcase")}
+			</Link>
+			<Link href={translatePath("/acerca-de-nosotros/")}>
+				{t("nav.about_us")}
+			</Link>
+			<Link href={translatePath("/contacto/")}>
+				{t("nav.contact_us")}
+			</Link>
+			<a href="#header-nav" class="absolute right-6 top-6 md:hidden">
+				<CloseIcon />
+			</a>
+		</nav>
+		<a href="#header-menu" class="md:hidden"><MenuIcon /></a>
+</header>
+
