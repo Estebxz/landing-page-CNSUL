@@ -1,0 +1,108 @@
+---
+import LoaderIcon from "@nav/Loader.astro";
+import GithubIcon from "@social/Github.astro";
+import LinkedinIcon from "@social/Linkedin.astro";
+import FacebookIcon from "./icons/social/Facebook.astro";
+import WhatsappIcon from "./icons/social/Whatsapp.astro";
+import Link from "@/styles/ui/Link.astro";
+import { getLangFromUrl, useTranslations, useTranslatedPath } from "@/i18n/utils";
+
+import { getI18N } from "@/i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<footer class="bg-[#2F3030]/90">
+  <div class="mx-auto w-full max-w-screen-xl px-6 py-6 lg:py-8">
+    <div class="md:flex md:justify-between">
+      <div class="mb-6 flex flex-col items-center md:mb-0 md:items-start">
+        <a href="" class="-mt-14 flex items-center justify-center md:justify-start">
+          <LoaderIcon class="h-auto w-24"/>
+        </a>
+        <div class="mt-24 flex gap-x-4">
+          <a href="" class="text-white duration-300">
+            <LinkedinIcon />
+            <span class="sr-only">Linkedin</span>
+          </a>
+          <a href="" class="text-white duration-300">
+            <FacebookIcon />
+            <span class="sr-only">Facebook</span>
+          </a>
+          <a href="" class="text-white duration-300">
+            <WhatsappIcon />
+            <span class="sr-only">Whatsapp</span>
+          </a>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-8 sm:grid-cols-2 sm:gap-6">
+        <div>
+          <h2 class="mb-6 text-sm font-semibold uppercase text-white">
+            {i18n.FOOTER.LEGAL.TITLE}
+          </h2>
+          <ul class="flex flex-col gap-2 font-medium text-gray-400">
+            <li>
+              <Link href={translatePath('/aviso-legal/')}>
+                {t('nav.legal')}
+              </Link>
+            </li>
+            <li>
+              <Link href={translatePath('/privacidad/')}>
+                {t('nav.privacidad')}
+              </Link>
+            </li>
+            <li>
+              <Link href={translatePath('/cookies/')}>
+                {t('nav.cookies')}
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mb-6 text-sm font-semibold uppercase text-white">
+            {i18n.FOOTER.WEB_MAP.TITLE}
+          </h2>
+          <ul class="flex flex-col gap-2 font-medium text-gray-400">
+            <li>
+              <Link href={translatePath('/')}>
+                {t('nav.home')}
+              </Link>
+            </li>
+            <li>
+              <Link href={translatePath('/briefcase/')}>
+                {t('nav.briefcase')}
+              </Link>
+            </li>
+            <li>
+              <Link href={translatePath('/about-us/')}>
+                {t('nav.about_us')}
+              </Link>
+            </li>
+            <li>
+              <Link href={translatePath('/contact/')}>
+                {t('nav.contact_us')}
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr class="my-2 border-white/50 sm:mx-auto lg:my-4" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <span class="text-sm text-gray-400 sm:text-center">
+        &copy; ESLAND 2021 - {new Date().getFullYear()} {i18n.FOOTER.DISCLAIMER}
+      </span>
+      <div class="mt-4 flex sm:mt-0">
+        <a href="https://github.com/midudev/esland-web" class="text-gray-500 hover:text-white ms-5 duration-300">
+          <GithubIcon class:list="size-4"/>
+          <span class="sr-only">GitHub account</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
